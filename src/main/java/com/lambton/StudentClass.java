@@ -1,6 +1,8 @@
 package com.lambton;
 
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 enum Gender{
     MALE,FEMALE,OTHER
@@ -21,6 +23,8 @@ public class StudentClass {
         this.birthDate=birthDate;
         this.gender=gender;
         this.totalMarks=totalMarks;
+
+
     }
 
     public void printData(){
@@ -30,6 +34,18 @@ public class StudentClass {
         System.out.println("Birth Date :"+birthDate);
         System.out.println("Gender :"+gender);
         System.out.println("Total Marks :"+totalMarks);
+    }
+
+    public void getStudentAge(){
+         int age;
+        LocalDate today = LocalDate.now();
+        LocalDate birthday = LocalDate.of(1993,11, 29);
+        Period period = Period.between(birthday, today);
+
+
+
+
+
     }
 
 
